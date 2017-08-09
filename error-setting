@@ -1,0 +1,29 @@
+PHP设置错误报告的4个规则：
+error_reporting 总是设置为 On
+开发环境下 display_errros = On
+生产环境 display_errors = Off
+开发和生产环境 log_errors = On
+
+例如：
+开发环境下php.ini的设置：
+;显示错误
+display_startup_errors = 1
+display_errors = 1
+
+;报告所有错误
+errror_reporting = -1
+
+;打开错误日志
+log_errors = 1
+
+
+生产环境下php.ini的设置：
+;显示错误
+display_startup_errors = 0
+display_errors = 0
+
+;报告所有错误除了 notice
+errror_reporting = E_All & ~E_NOTICE
+
+;打开错误日志
+log_errors = 1
