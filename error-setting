@@ -27,3 +27,9 @@ errror_reporting = E_All & ~E_NOTICE
 
 ;打开错误日志
 log_errors = 1
+
+;;;;;;;;;;;;;;;;
+//把PHP错误和警告写到文件
+ini_set("log_errors", 1);
+ini_set("error_log", "/tmp/php-error.log");
+error_log( "Hello, errors!" ); //or include("file_with_errors.php");
